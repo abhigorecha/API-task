@@ -26,7 +26,10 @@ public class UserService {
     }
 
     public UsersModel fetchByAccountNumber(String accountNumber) {
-        return new UsersModel(usersRepository.findByAccountNumber(accountNumber));
+        Users users = usersRepository.findByAccountNumber(accountNumber);
+        if (users == null)
+            return null;
+        return new UsersModel(users);
     }
 
 }
