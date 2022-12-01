@@ -2,14 +2,13 @@ name: Maven CI
 
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
 
   build:
 
     name: Build
-    needs: check-code-formatting
     
     runs-on: ubuntu-latest
     
