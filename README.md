@@ -67,6 +67,12 @@ Fetch all the users
 }
 ```
 
+##### Request Body Validation
+- `firstName`: Should not be blank
+- `lastName`: Should not be blank
+- `email`: Must be a valid email
+- `accountNumber`: Should not be blank
+
 #### Response Body
 
 ```json
