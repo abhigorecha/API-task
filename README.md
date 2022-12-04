@@ -23,6 +23,83 @@ Available @ **`http://localhost:8080`**
 
 ## API Secifications
 
+### [GET]`/users`
+Fetch all the users
+
+#### Request Body
+
+```json
+[
+  {
+    "firstName" : "Abhishek",
+    "lastName": "Gorecha",
+    "accountNumber": "123456789",
+    "email": "abhishek@gmail.com",
+    "birthDate": "1997-12-23"
+  },
+  {
+    "firstName" : "Neelesh",
+    "lastName": "Lakhera",
+    "accountNumber": "987654321",
+    "email": "neelesh@gmail.com",
+    "birthDate": "1997-01-01"
+  }
+]
+```
+
+#### Response Status
+- **`200`** OK
+- **`500`** Internal Server Error
+
+
+### [POST]`/users`
+Fetch all the users
+
+#### Request Body
+
+```json
+{
+  "firstName" : "Abhishek",
+  "lastName": "Gorecha",
+  "accountNumber": "123456789",
+  "email": "abhishek@gmail.com",
+  "birthDate": "1997-12-23"
+}
+```
+
+#### Response Body
+
+```json
+1
+```
+
+#### Response Status
+- **`200`** OK
+- **`500`** Internal Server Error
+
+
+
+### [POST]`/users/{accountNumber}`
+Fetch a particular User's data by account number
+
+#### Response Body
+
+```json
+{
+  "firstName" : "Abhishek",
+  "lastName": "Gorecha",
+  "accountNumber": "123456789",
+  "email": "abhishek@gmail.com",
+  "birthDate": "1997-12-23"
+}
+```
+
+#### Response Status
+- **`200`** OK
+- **`404`** Not Found
+- **`500`** Internal Server Error
+
+
 The **Swagger UI** is available @ **`http://localhost:8080/swagger-ui.httml`**
 
 
