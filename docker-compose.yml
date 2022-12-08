@@ -13,7 +13,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
 
-  twitter-backend:
+  backend:
     depends_on:
       - db
     image: abhigorecha/airmeet:latest
